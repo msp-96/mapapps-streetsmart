@@ -285,7 +285,7 @@ export default class StreetSmartController {
             this.#streetSmartWatcher.push(this._connectToMeasurementEvent());
             this._connectToStreetSmartAPIEvents(panorama);
 
-            if (model.useMapCenterLocation) {
+            if (model.useMapCenterLocation && !this.#mapViewCenterWatcher) {
                 this.#mapViewCenterWatcher = this._connectMapViewCenterWatcher();
             }
         }
