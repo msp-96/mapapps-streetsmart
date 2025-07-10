@@ -87,6 +87,7 @@ export default class StreetSmartController {
                 view.padding = this.#initialViewPadding;
                 this.#initialViewPadding = null;
             }
+            this.tool.set("visibility", false);
             return;
         }
         const streetSmartDiv = document.getElementsByClassName("dn_streetsmart__container");
