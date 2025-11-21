@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "ESNext",
+        "moduleResolution": "bundler",
+        "baseUrl": ".",
+        "paths": {
+            "*": ["./src/main/js/bundles/*", "./node_modules/@conterra/ct-mapapps-typings/*"]
+        },
+        "allowJs": true,
+        "noEmit": true,
+        "strict": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true
+    },
+    "include": ["src", "node_modules/arcgis-js-api/index.d.ts", "playwright.config.ts"]
+}

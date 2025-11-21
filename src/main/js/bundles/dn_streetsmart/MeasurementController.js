@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import SpatialReference from "esri/geometry/SpatialReference";
+import SpatialReference from "@arcgis/core/geometry/SpatialReference";
 
 export default class MeasurementController {
 

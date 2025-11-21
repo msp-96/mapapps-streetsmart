@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import Point from "esri/geometry/Point";
+import Point from "@arcgis/core/geometry/Point";
 import dijitRegistry from "dijit/registry";
 import async from "apprt-core/async";
 

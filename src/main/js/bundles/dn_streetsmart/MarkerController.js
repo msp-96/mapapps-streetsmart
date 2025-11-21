@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import SketchViewModel from "esri/widgets/Sketch/SketchViewModel";
-import GraphicsLayer from "esri/layers/GraphicsLayer";
-import Graphic from "esri/Graphic";
+import SketchViewModel from "@arcgis/core/widgets/Sketch/SketchViewModel";
+import GraphicsLayer from "@arcgis/core/layers/GraphicsLayer";
+import Graphic from "@arcgis/core/Graphic";
 
 export default class MarkerController {
 
