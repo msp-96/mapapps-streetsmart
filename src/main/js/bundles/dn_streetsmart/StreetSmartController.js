@@ -17,7 +17,7 @@ import Point from "@arcgis/core/geometry/Point";
 import dijitRegistry from "dijit/registry";
 import async from "apprt-core/async";
 
-export default class StreetSmartController {
+export class StreetSmartController {
 
     #streetSmartAPI = null;
     #streetSmartWatcher = null;

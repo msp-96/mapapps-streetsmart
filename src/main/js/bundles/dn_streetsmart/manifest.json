@@ -1,6 +1,6 @@
 {
     "name": "dn_streetsmart",
-    "version": "1.7.1-SNAPSHOT",
+    "version": "1.8.1-SNAPSHOT",
     "title": "${bundleTitle}",
     "description": "${bundleDescription}",
     "vendor": "con terra GmbH",
@@ -8,12 +8,15 @@
         "streetsmart"
     ],
     "icon": {},
-    "license": {},
     "productName": "devnet-mapapps-streetsmart",
     "dependencies": {
-        "coordinatetransformer": "^4.7.0",
-        "geojson": "^4.7.0",
-        "highlights": "^4.7.0"
+        "@arcgis/core": "^4.33.0",
+        "apprt-core": "^4.20.0",
+        "ct": "^4.20.0",
+        "dijit": "^1.0.0",
+        "coordinatetransformer": "^4.20.0",
+        "geojson": "^4.20.0",
+        "highlights": "^4.20.0"
     },
     "layout-widgets": [
         {

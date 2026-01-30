@@ -15,7 +15,7 @@
  */
 import SpatialReference from "@arcgis/core/geometry/SpatialReference";
 
-export default class MeasurementController {
+export class MeasurementController {
 
     #highlights = null;
 

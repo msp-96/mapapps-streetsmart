@@ -3,33 +3,38 @@
         "title": "${apptitle}"
     },
     "load": {
+        "bundleLocations": [
+            "localbundles",
+            "bundles"
+        ],
         "allowedBundles": [
-            "system",
-            "console",
-            "notifier",
-            "splashscreen",
-            "templatelayout",
-            "theme-everlasting",
-            "theme-winter",
-            "theme-spring",
-            "theme-summer",
-            "theme-autumn",
-            "map-init",
-            "map-preload-2D",
-            "toolset",
+            "agssearch",
             "banner",
             "basemaptoggler",
-            "mapnavigation",
-            "popups-default",
-            "scalebar",
+            "languagetoggler",
             "locateme",
-            "omnisearch",
             "locator-store",
-            "toc",
-            "coordinateviewer",
-            "toolrules",
-            "custominfo",
+            "map-init",
+            "map-preload-2D",
+            "mapnavigation",
+            "measurement-2d",
+            "notifier",
+            "parameter-url",
             "popups-default",
+            "printing",
+            "result-ui",
+            "scalebar",
+            "search-ui",
+            "selection-ui",
+            "sketching",
+            "splashscreen",
+            "system",
+            "template-seasons",
+            "templatelayout",
+            "theme-autumn",
+            "toc",
+            "toolset",
+            "dn_imprintprivacy",
             "dn_streetsmart",
             "template-streetsmart"
         ],
@@ -41,9 +46,9 @@
         "dn_streetsmart": {
             "Config": {
                 "streetSmartProperties": {
-                    "apiKey": "",
-                    "username": "",
-                    "password": "",
+                    "apiKey": "irApyf0duLo1Gj8RWzwpuLUFyzcROLANyzMNufMxqfQV6DIR6H0xqLsVOLsRijUR",
+                    "username": "mapapps",
+                    "password": "bpeyw4j7",
                     "srs": "EPSG:25832",
                     "locale": "de",
                     "overlayDrawDistance": 30,
@@ -67,59 +72,29 @@
                 "mapCenterLocationDelay": 500
             }
         },
+        "agssearch": {
+            "AutoStoreRegistration": {
+                "componentEnabled": true
+            }
+        },
         "banner": {
             "BannerWidget": {
                 "label": "Developer Network",
-                "image": "resource('${app}:/images/logo_conterra.png')",
-                "imageWidth": 200,
+                "image": "resource('${app}:/assets/logo.svg')",
+                "imageWidth": 150,
                 "imagePosition": "above",
-                "link": "http://developernetwork.conterra.de"
+                "link": "http://conterra.github.io"
             }
         },
         "basemaptoggler": {
             "Config": {
                 "itemStyles": {
-                    "esri_street": "icon-thumbnail",
-                    "esri_hybrid": "icon-thumbnail",
-                    "esri_topo": "icon-thumbnail"
+                    "gray": "icon-thumbnail",
+                    "streets": "icon-thumbnail",
+                    "satellite": "icon-thumbnail",
+                    "hybrid": "icon-thumbnail"
                 }
             }
-        },
-        "custominfo": {
-            "CustomInfoToggleTool": [
-                {
-                    "widgetSettings": {
-                        "content": "${custominfo.welcome.content}",
-                        "window": {
-                            "marginBox": {
-                                "l": 20,
-                                "b": 70,
-                                "w": 500,
-                                "h": 300
-                            },
-                            "draggable": true,
-                            "closable": true,
-                            "modal": false,
-                            "maximizable": false,
-                            "resizable": true,
-                            "title": "${custominfo.welcome.title}"
-                        }
-                    },
-                    "type": "IMPRINT",
-                    "toolClass": "ctInfo",
-                    "title": "${welcome.imprint.title}",
-                    "tooltip": "${welcome.imprint.tooltip}",
-                    "tooltipPositions": [
-                        "after",
-                        "above",
-                        "below",
-                        "before"
-                    ],
-                    "iconClass": "icon-custom-info-imprint",
-                    "togglable": true,
-                    "id": "IMPRINT_Imprint_CustomInfoTool"
-                }
-            ]
         },
         "map-init": {
             "Config": {
@@ -527,60 +502,17 @@
                 }
             }
         },
-        "themes": {
-            "ThemeModel": {
-                "_selectedTheme": "everlasting"
-            },
-            "ThemeSelector": {
-                "componentEnabled": true
-            }
-        },
-        "templates": {
-            "TemplateModel": {
-                "_templates": [
-                    {
-                        "name": "streetsmart",
-                        "widgets": [
-                            {
-                                "widgetRole": "drawer_button",
-                                "attachTo": "map_topleft",
-                                "props": {
-                                    "layoutIndex": 0
-                                }
-                            },
-                            {
-                                "widgetRole": "sharelink",
-                                "window": {
-                                    "dockable": false,
-                                    "dockingBar": null
-                                }
-                            },
-                            {
-                                "widgetRole": "legend",
-                                "sublayout": [
-                                    "mobile_portrait",
-                                    "mobile_landscape"
-                                ],
-                                "window": {
-                                    "dockable": false,
-                                    "dockingBar": null
-                                }
-                            },
-                            {
-                                "widgetRole": "banner",
-                                "sublayout": [
-                                    "mobile_portrait"
-                                ],
-                                "attachTo": "footer_right"
-                            }
-                        ]
-                    }
-                ]
-            }
-        },
         "toc": {
             "Config": {
-                "showBasemaps": true
+                "showBasemaps": true,
+                "showLayerLegend": true
+            }
+        },
+        "toolrules": {
+            "ToolActiveStateManager": {
+                "activateOnStartToolIds": [
+                    "streetSmartToggleTool"
+                ]
             }
         },
         "toolset": {
@@ -589,22 +521,66 @@
                     {
                         "id": "mapview_tools",
                         "tools": [
+                            "streetSmartToggleTool",
                             "locateMeTool",
                             "zoomInTool",
                             "zoomOutTool",
                             "compassTool",
                             "restoreInitialViewTool",
-                            "streetSmartToggleTool"
+                            "viewmodeSwitcherTool"
                         ],
                         "registerWidget": {
                             "widgetRole": "mapview_tools"
                         },
                         "container": "ignore",
                         "windowType": "container",
-                        "cssClass": "muted"
+                        "cssClass": "muted",
+                        "tooltipPositions": [
+                            "before",
+                            "above",
+                            "below",
+                            "after"
+                        ]
                     },
                     {
-                        "id": "label_tools",
+                        "id": "drawer_left",
+                        "title": "${tools.drawerLeft}",
+                        "cssClass": "ct-main-app-menu",
+                        "tools": [
+                            "selection-ui-tool",
+                            "sketchToggleTool",
+                            "measuring_tools",
+                            "printingToggleTool"
+                        ],
+                        "registerWidget": {
+                            "widgetRole": "drawer_button"
+                        },
+                        "container": "ignore",
+                        "windowType": "drawer_left",
+                        "tooltipPositions": [
+                            "after",
+                            "above",
+                            "below",
+                            "before"
+                        ]
+                    },
+                    {
+                        "id": "measuring_tools",
+                        "title": "${tools.measuring}",
+                        "iconClass": "icon-editor-table",
+                        "tools": [
+                            "distanceMeasurement2DToggleTool",
+                            "areaMeasurement2DToggleTool"
+                        ],
+                        "container": "ignore",
+                        "registerTool": true,
+                        "windowType": "menuitem",
+                        "tooltipPositions": [
+                            "after"
+                        ]
+                    },
+                    {
+                        "id": "streetsmart_tools",
                         "tools": [
                             "streetSmartToggleTool",
                             "streetSmartModeToggleTool"
@@ -620,11 +596,41 @@
                 ]
             }
         },
-        "toolrules": {
-            "ToolActiveStateManager": {
-                "activateOnStartToolIds": [
-                    "IMPRINT_Imprint_CustomInfoTool"
-                ]
+        "dn_imprintprivacy": {
+            "ToolHandler": {
+                "imprintUrls": [
+                    {
+                        "locale": "de",
+                        "url": "https://www.conterra.de/impressum"
+                    },
+                    {
+                        "locale": "en",
+                        "url": "https://www.con-terra.com/imprint"
+                    }
+                ],
+                "privacyUrls": [
+                    {
+                        "locale": "de",
+                        "url": "https://www.conterra.de/datenschutzhinweise"
+                    },
+                    {
+                        "locale": "en",
+                        "url": "https://www.con-terra.com/privacy-statements"
+                    }
+                ],
+                "toolsetDefinition": {
+                    "id": "imprintprivacyToolset",
+                    "tools": [
+                        "imprintTool",
+                        "privacyStatementsTool"
+                    ],
+                    "registerWidget": {
+                        "widgetRole": "footer_right"
+                    },
+                    "container": "ignore",
+                    "windowType": "container",
+                    "cssClass": "showToolLabels"
+                }
             }
         }
     }

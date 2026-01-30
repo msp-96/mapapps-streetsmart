@@ -15,7 +15,7 @@
  */
 import IFrameContent from "ct/ui/desktop/IFrameContent";
 
-export default class StreetSmartWidgetFactory {
+export class StreetSmartWidgetFactory {
 
     #iFrameContent = null;
 

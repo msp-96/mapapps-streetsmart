@@ -14,14 +14,7 @@
  * limitations under the License.
  */
 module.exports = {
-    apptitle: "map.apps 4 Sample",
-    custominfo: {
-        welcome: {
-            title: "Street Smart Demo",
-            tooltip: "Street Smart Demo",
-            content: "<p>Willkommen zur Street Smart Beispiel-App.</p><br><span>Starten Sie das Street Smart Bundle, indem sie auf das Street Smart Tool unterhalb der Suchleiste klicken.</span><br><br><span>Klicken Sie auf den Street Smart Marker innerhalb der map.apps Karte, um den Editiermodus zu aktivieren. Daraufhin können Sie den Marker bei gedrückter Maustaste bewegen. Sie können den Editiermodus jederzeit durch einen Klick neben den Marker beenden.</span>"
-        }
-    },
+    apptitle: "StreetSmart Sample",
     map: {
         koeln1: {
             title: "Basisdaten",
@@ -77,11 +70,15 @@ module.exports = {
             }
         },
         basemaps: {
-            street: "Stra\xDFenkarte (grau)",
-            street2: "Stra\xDFenkarte",
+            gray: "Stra\xDFenkarte (grau)",
+            streets: "Stra\xDFenkarte",
             topo: "Topographische Karte",
             hybrid: "Luftbild (hybrid)"
         }
+    },
+    tools: {
+        drawerLeft: "Werkzeuge",
+        measuring: "Messwerkzeuge"
     },
     common: {
         number: "Nummer",
@@ -93,7 +90,7 @@ module.exports = {
         furtherinfo: "Weitere Informationen",
         precint: "Stadtbezirk",
         district: "Stadtviertel",
-        "private": "private",
+        private: "private",
         municipal: "st\xE4dtischer",
         zip: "PLZ",
         type: "Art"

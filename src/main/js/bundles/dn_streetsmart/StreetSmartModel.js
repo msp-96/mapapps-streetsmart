@@ -13,13 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {declare} from "apprt-core/Mutable";
+import { Mutable, properties } from "apprt-core/Mutable";
 
-export default declare({
-
+export class StreetSmartModel extends Mutable { }
+properties(StreetSmartModel, {
     streetSmartProperties: null,
     streetSmartLayerId: null,
     markerSymbols: null,
     measurementSymbols: null
-
 });

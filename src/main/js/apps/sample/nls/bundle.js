@@ -15,14 +15,7 @@
  */
 module.exports = {
     root: {
-        apptitle: "map.apps 4 Sample",
-        custominfo: {
-            welcome: {
-                title: "Street Smart Demo",
-                tooltip: "Street Smart Demo",
-                content: "<p>Welcome to the map.apps Street Smart sample app.</p><br><span>Start the Street Smart Bundle by clicking on the Street Smart Tool below the search bar.</span><br><br><span>Click on the Street Smart Marker within the map.apps map to activate the edit mode. Then you can move the marker while holding down the mouse button. You can exit the edit mode at any time by clicking next to the marker.</span>"
-            }
-        },
+        apptitle: "StreetSmart Sample",
         map: {
             koeln1: {
                 title: "Basic Data",
@@ -77,11 +70,15 @@ module.exports = {
                 }
             },
             basemaps: {
-                street: "Street Map (gray)",
-                street2: "Street Map",
+                gray: "Street Map (gray)",
+                streets: "Street Map",
                 topo: "Topographical Map",
                 hybrid: "Aerial (hybrid)"
             }
+        },
+        tools: {
+            drawerLeft: "Tools",
+            measuring: "Measuring Tools"
         },
         common: {
             number: "Number",
